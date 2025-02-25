@@ -13,6 +13,11 @@ export const Home = () => {
     const { blogs, loading } = useBlogs();
     const navigate = useNavigate();
 
+    // Check for jwt token in local storage
+    if (!localStorage.getItem('jwt')) {
+        navigate('/signin');
+    }
+
 
     if (loading) {
         return (

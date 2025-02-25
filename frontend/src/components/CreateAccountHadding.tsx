@@ -10,7 +10,7 @@ export const CreateAccountHadding = ({ type }: CreateAccountHaddingProps) => {
             <h1 className="text-3xl font-extrabold">
                 {type === "signup" ? "Create an account" : "Log in"}
             </h1>
-            <div className="mt-4 text-gray-500 flex gap-1">
+            <div className="mt-4 text-gray-500  flex justify-center items-center gap-1">
                 <p>{type === 'signup' ? "Already have an account?" : "Don't have an account?"}</p>
                 <Link to={
                     type === 'signup' ? "/signin" : "/signup"
